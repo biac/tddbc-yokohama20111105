@@ -2,9 +2,12 @@
 
 namespace TDDBC横浜 {
 	public class 野球選手 {
-		public decimal? Calc打率(int 打席数, int 打数, int 安打数) {	//返値をdecimalからdecimal?に変更
+		public decimal? Calc打率(int 打席数, int 打数, int 安打数) {
 			if (打席数 == 0)
 				return null;
+
+			if (打数 == 0)
+				return 0.0m;
 
 			return Math.Round((decimal)安打数 / 打数, 3, MidpointRounding.AwayFromZero);
 			//TODO: 四捨五入方式は AwayFromZero で良いか?

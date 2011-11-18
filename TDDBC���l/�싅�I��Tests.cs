@@ -14,9 +14,9 @@ namespace TDDBC横浜 {
 		}
 
 		[TestCase(5, 0, 0)]
-		public void Calc打率Test02_打数0なら例外(int 打席数, int 打数, int 安打数) {
+		public void Calc打率Test02_打数0なら0(int 打席数, int 打数, int 安打数) {
 			野球選手 p = new 野球選手();
-			Assert.Throws<DivideByZeroException>(() => p.Calc打率(打席数, 打数, 安打数));
+			Assert.AreEqual(0.0m, p.Calc打率(打席数, 打数, 安打数));
 		}
 
 		[TestCase(0, 0, 0, null)]
