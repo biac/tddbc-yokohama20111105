@@ -23,6 +23,8 @@ namespace TDDBC横浜 {
 		[TestCase(5, 4, 1, ".250")]
 		[TestCase(5, 4, 4, "1.00")]
 		[TestCase(0, 0, 0, "----")]
+		[TestCase(5, -4, 1, "-.250")]	//仕様未定義(ありえない引数)
+		[TestCase(5, 4, 45, "11.250")]	//仕様未定義(ありえない引数)
 		public void Get表示用打率Test(int 打席数, int 打数, int 安打数, string 期待値) {
 			野球選手 p = new 野球選手();
 			string 打率 = p.Get表示用打率(打席数, 打数, 安打数);
