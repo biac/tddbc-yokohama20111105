@@ -14,13 +14,15 @@ namespace TDDBC横浜 {
 		}
 
 		public string Get表示用打率(int 打席数, int 打数, int 安打数) {
-			decimal? 打率 = this.Calc打率(打席数, 打数, 安打数);
-			if (打率 == null)
+			decimal? 打率データ = this.Calc打率(打席数, 打数, 安打数);
+			if (打率データ == null)
 				return "----";
-			if (打率.Value == 1.0m)
+
+			decimal 打率 = 打率データ.Value;
+			if (打率 == 1.0m)
 				return "1.00";
 
-			return 打率.Value.ToString(".000");
+			return 打率.ToString(".000");
 		}
 	}
 }
