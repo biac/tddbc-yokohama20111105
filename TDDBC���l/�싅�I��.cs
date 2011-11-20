@@ -12,5 +12,15 @@ namespace TDDBC横浜 {
 			return Math.Round((decimal)安打数 / 打数, 3, MidpointRounding.AwayFromZero);
 			//TODO: 四捨五入方式は AwayFromZero で良いか?
 		}
+
+		public string Get表示用打率(int 打席数, int 打数, int 安打数) {
+			decimal? 打率 = this.Calc打率(打席数, 打数, 安打数);
+			if (打率 == null)
+				return "----";
+			if (打率.Value == 1.0m)
+				return "1.00";
+
+			return 打率.Value.ToString(".000");
+		}
 	}
 }
