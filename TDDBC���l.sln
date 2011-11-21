@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDBC横浜", "TDDBC横浜\TDDBC横浜.csproj", "{B7BBE60F-B23E-4EB5-B624-4E94250E73C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tddbc横浜", "TDDBC横浜\Tddbc横浜.csproj", "{B7BBE60F-B23E-4EB5-B624-4E94250E73C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

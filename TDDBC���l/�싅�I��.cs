@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TDDBC横浜 {
+namespace Tddbc横浜 {
 	public class 野球選手 {
 		public decimal? Calc打率(int 打席数, int 打数, int 安打数) {
 			if (打席数 == 0)
@@ -22,7 +22,7 @@ namespace TDDBC横浜 {
 			if (打率 == 1.0m)
 				return "1.00";
 
-			return 打率.ToString(".000");
+			return 打率.ToString(".000", null);
 		}
 	}
 }
